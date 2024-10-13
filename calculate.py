@@ -7,6 +7,17 @@ funcs = ['perimeter', 'area']
 sizes = {}
 
 def calc(fig, func, size):
+        '''
+        Вычисляет и выводит результат выполнения функции для указанной фигуры.
+
+        Параметры:
+                fig (str): Название фигуры
+                func (str): Название функции для вычисления
+                size (list): Список размеров фигуры
+
+        Возвращаемое значение:
+        None
+        '''
 	assert fig in figs
 	assert func in funcs
 
