@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 from calculate import calc
 
+
 class TestCalculate(unittest.TestCase):
 
     def test_calc_valid_circle_area(self):
