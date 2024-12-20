@@ -1,53 +1,44 @@
-name: CI
+name: CI for geometric_lib
 
 on:
   push:
     branches:
       - main
       - release/*
-      - develop
   pull_request:
     branches:
-      - main
-      - release/*
       - develop
+      - release/*
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Output information
-        run: |
-          echo "Full Name: Konstantin Stakhurskiy"
-          echo "Group: M3114"
-          echo "GitHub username: ${{ github.actor }}"
+    - name: Display user info
+      run: |
+        echo "Full Name: Konstantin Stakhurskiy"
+        echo "Group: M3114"
+        echo "Github Username: ${{ github.actor }}"
 
-      - name: Set up Python 3.13
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.13'
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.13'
 
-      - name: Check current directory and list files
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Listing files:"
-          ls -alh
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+    - name: Run tests
+      run: |
+        python -m unittest discover tests/
 
-      - name: Run tests
-        run: |
-          pytest
-
-      - name: Lint code with flake8
-        run: |
-          pip install flake8
-          flake8 src tests
+    - name: Check code style
+      run: |
+        pip install flake8
+        flake8 .
