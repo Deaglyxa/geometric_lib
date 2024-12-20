@@ -1,6 +1,7 @@
 import unittest
 from square import area, perimeter
 
+
 class TestSquareCalculations(unittest.TestCase):
 
     def test_area_positive_side(self):
