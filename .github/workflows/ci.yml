@@ -1,0 +1,48 @@
+name: CI for geometric_lib
+
+on:
+  push:
+    branches:
+      - main
+      - release/*
+      - develop
+  pull_request:
+    branches:
+      - develop
+      - release/*
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Display user info
+      run: |
+        echo "Full Name: Konstantin Stakhurskiy"
+        echo "Group: M3114"
+        echo "Github Username: ${{ github.actor }}"
+
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        python -m unittest discover tests/
+
+    - name: Install black
+      run: |
+        pip install black
+
+    - name: Check code style with black
+      run: |
+        black --check --diff .
