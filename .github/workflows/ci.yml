@@ -8,23 +8,19 @@ on:
       - develop
   pull_request:
     branches:
-      - main
+      - master
       - release/*
       - develop
-
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
       - name: Output information
         run: |
-          echo "Full Name: Konstantin Stakhurskiy"
-          echo "Group: M3114"
+          echo "Full Name: Иван Иванов"
+          echo "Group: 1234"
           echo "GitHub username: ${{ github.actor }}"
 
       - name: Set up Python 3.13
@@ -39,10 +35,9 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest --maxfail=1 --disable-warnings -q
+          pytest  
 
-      - name: Lint code
+      - name: Lint code with flake8
         run: |
           pip install flake8
-          flake8 --max-line-length=79
-
+          flake8 geometric_lib tests
