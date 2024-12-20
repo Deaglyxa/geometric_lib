@@ -39,10 +39,10 @@ jobs:
       run: |
         python -m unittest discover tests/
 
-    - name: Install pylint
+    - name: Install black
       run: |
-        pip install pylint
+        pip install black
 
-    - name: Check code style with pylint
+    - name: Check code style with black
       run: |
-        pylint **/*.py
+        black --check --diff .
