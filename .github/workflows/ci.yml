@@ -4,14 +4,13 @@ on:
   push:
     branches:
       - main
-      - develop
       - release/*
-      - feat/tests
+      - develop
   pull_request:
     branches:
       - main
-      - develop
       - release/*
+      - develop
 
 jobs:
   build:
@@ -21,17 +20,23 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Debug current directory and list files
+      - name: Output information
         run: |
-          echo "Current directory:"
-          pwd
-          echo "Listing files:"
-          ls -alh
+          echo "Full Name: Konstantin Stakhurskiy"
+          echo "Group: M3114"
+          echo "GitHub username: ${{ github.actor }}"
 
       - name: Set up Python 3.13
         uses: actions/setup-python@v4
         with:
           python-version: '3.13'
+
+      - name: Check current directory and list files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Listing files:"
+          ls -alh
 
       - name: Install dependencies
         run: |
@@ -40,7 +45,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest  # Используйте Test Discovery
+          pytest
 
       - name: Lint code with flake8
         run: |
