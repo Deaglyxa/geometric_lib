@@ -1,7 +1,3 @@
-import circle
-import square
-
-
 figs = ['circle', 'square']
 funcs = ['perimeter', 'area']
 sizes = {}
