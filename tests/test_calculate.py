@@ -1,18 +1,19 @@
+"""
+Module for testing the calculate functionality in the geometric_lib.
+This module contains unit tests for the functions in the calculate module.
+"""
+
 import unittest
+import sys
+import os
 from unittest.mock import patch
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from calculate import calc
 
-
 class TestCalculate(unittest.TestCase):
-    """
-    Test case for testing the 'calc' function from the 'calculate' module.
-    Includes tests for valid and invalid input for various figures and functions.
-    """
 
     def test_calc_valid_circle_area(self):
-        """
-        Test the calculation of the area of a circle with a valid input.
-        """
         fig = "circle"
         func = "area"
         size = [3]
@@ -24,9 +25,6 @@ class TestCalculate(unittest.TestCase):
         mock_print.assert_called_once_with(f'area of circle is {expected_result}')
 
     def test_calc_valid_square_perimeter(self):
-        """
-        Test the calculation of the perimeter of a square with a valid input.
-        """
         fig = "square"
         func = "perimeter"
         size = [4]
@@ -38,9 +36,6 @@ class TestCalculate(unittest.TestCase):
         mock_print.assert_called_once_with(f'perimeter of square is {expected_result}')
 
     def test_calc_invalid_figure(self):
-        """
-        Test for invalid figure type (e.g., 'triangle').
-        """
         fig = "triangle"
         func = "area"
         size = [3]
@@ -49,9 +44,6 @@ class TestCalculate(unittest.TestCase):
             calc(fig, func, size)
 
     def test_calc_invalid_function(self):
-        """
-        Test for invalid function type (e.g., 'volume').
-        """
         fig = "circle"
         func = "volume"
         size = [3]
@@ -60,9 +52,6 @@ class TestCalculate(unittest.TestCase):
             calc(fig, func, size)
 
     def test_calc_invalid_size_length(self):
-        """
-        Test for invalid number of size parameters.
-        """
         fig = "circle"
         func = "area"
         size = [3, 4]
@@ -71,9 +60,6 @@ class TestCalculate(unittest.TestCase):
             calc(fig, func, size)
 
     def test_calc_invalid_size_type(self):
-        """
-        Test for invalid type of size parameters.
-        """
         fig = "circle"
         func = "area"
         size = ["radius"]
