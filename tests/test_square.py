@@ -3,7 +3,6 @@ import square
 
 
 class TestSquare(unittest.TestCase):
-
     def test_area(self):
         a = 4
         expected_area = a * a

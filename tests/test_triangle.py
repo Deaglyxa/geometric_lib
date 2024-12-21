@@ -3,7 +3,6 @@ import triangle
 
 
 class TestTriangle(unittest.TestCase):
-
     def test_area(self):
         a, b, c = 3, 4, 5
         expected_area = (a + b + c) / 2

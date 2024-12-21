@@ -3,7 +3,6 @@ import calculate
 
 
 class TestCalculate(unittest.TestCase):
-
     def test_calc_circle_area(self):
         fig = "circle"
         func = "area"

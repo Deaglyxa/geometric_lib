@@ -4,7 +4,6 @@ import circle
 
 
 class TestCircle(unittest.TestCase):
-
     def test_area(self):
         r = 5
         expected_area = math.pi * r * r
