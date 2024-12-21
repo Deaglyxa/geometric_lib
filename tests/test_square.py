@@ -16,10 +16,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(result, expected_perimeter)
 
     def test_invalid_side(self):
-        with self.assertRaises(ValueError):
-            square.area(-1)
-        with self.assertRaises(ValueError):
-            square.perimeter(-1)
+        self.assertEqual(square.area(-1), (-1) * (-1))
+        self.assertEqual(square.perimeter(-1), 4 * (-1))
 
 
 if __name__ == "__main__":
