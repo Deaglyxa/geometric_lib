@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - develop
       - release
   pull_request:
     branches:
@@ -16,11 +15,15 @@ jobs:
   code-style:
     runs-on: ubuntu-latest
 
+    env:
+      NAME: Konstantin Stakhurskiy
+      GROUP: M3114
+
     steps:
     - name: Display user information
       run: |
-        echo "Name:  Konstantin Stakhurskiy"
-        echo "Group: M3114"
+        echo "Name:  $NAME"
+        echo "Group: $GROUP"
         echo "GitHub Username: ${{ github.actor }}"
 
     - name: Checkout repository

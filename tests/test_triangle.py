@@ -15,7 +15,7 @@ class TestTriangle(unittest.TestCase):
         result = triangle.perimeter(a, b, c)
         self.assertEqual(result, expected_perimeter)
 
-    def test_invalid_sides(self):
+    def test_invalid_sides_area(self):
         with self.assertRaises(ValueError):
             triangle.area(-1, 2, 3)
         with self.assertRaises(ValueError):
@@ -23,6 +23,7 @@ class TestTriangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             triangle.area(1, -2, 3)
 
+    def test_invalid_sides_perimeter(self):
         with self.assertRaises(ValueError):
             triangle.perimeter(-1, 2, 3)
         with self.assertRaises(ValueError):
