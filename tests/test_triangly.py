@@ -1,6 +1,7 @@
 import unittest
 from geometric_lib import triangle
 
+
 class TestTriangle(unittest.TestCase):
 
     def test_area(self):
@@ -21,5 +22,6 @@ class TestTriangle(unittest.TestCase):
             triangle.area(a, b, c)
             triangle.perimeter(a, b, c)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

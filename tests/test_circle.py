@@ -2,6 +2,7 @@ import unittest
 import math
 from geometric_lib import circle
 
+
 class TestCircle(unittest.TestCase):
 
     def test_area(self):
@@ -22,5 +23,6 @@ class TestCircle(unittest.TestCase):
             circle.area(r)
             circle.perimeter(r)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

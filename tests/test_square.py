@@ -1,6 +1,7 @@
 import unittest
 from geometric_lib import square
 
+
 class TestSquare(unittest.TestCase):
 
     def test_area(self):
@@ -21,5 +22,6 @@ class TestSquare(unittest.TestCase):
             square.area(a)
             square.perimeter(a)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
