@@ -21,5 +21,6 @@ class TestTriangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             triangle.area(1, 1, 3)
 
+
 if __name__ == "__main__":
     unittest.main()
