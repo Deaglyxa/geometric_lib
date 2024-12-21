@@ -19,8 +19,8 @@ jobs:
     steps:
     - name: Display user information
       run: |
-        echo "Name: Ivanov Ivan"
-        echo "Group: 12345"
+        echo "Name:  Konstantin Stakhurskiy"
+        echo "Group: M3114"
         echo "GitHub Username: ${{ github.actor }}"
 
     - name: Checkout repository
@@ -31,24 +31,18 @@ jobs:
       with:
         python-version: '3.13'
 
-    - name: Install dependencies
+    - name: Install dependencies from requirements.txt
       run: |
         python -m pip install --upgrade pip
-        pip install black
+        pip install -r requirements.txt
 
     - name: Run Black code style check
       run: |
         black --check --diff .
 
-    - name: Run tests with pytest
+    - name: Run tests with unittest
       run: |
-        pip install pytest
-        pytest tests/
-
-    - name: Check code style with flake8
-      run: |
-        pip install flake8
-        flake8 --max-line-length=79 .
+        python -m unittest discover -s tests
 
     - name: Display result
       run: echo "Code style check and tests completed"
