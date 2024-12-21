@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="045e7d1a-229f-4f06-8c02-3efcbfd13961" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculate.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/circle.py" beforeDir="false" afterPath="$PROJECT_DIR$/circle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/square.py" beforeDir="false" afterPath="$PROJECT_DIR$/square.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_calculate.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_calculate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_circle.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_circle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_square.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_square.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_triangle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,24 +22,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Deaglyxa/geometric_lib.git",
+    "accountId": "5c7a91ac-9c42-40ec-a974-4197540fa2ce"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2ou1OXnaF9ChA95DdHb8n4PheUn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.calculate.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/tests&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kos18/geometric_lib&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.calculate.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feat/tests",
+    "last_opened_file_path": "C:/Users/kos18/geometric_lib",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kos18\geometric_lib\tests" />
