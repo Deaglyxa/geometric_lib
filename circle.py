@@ -1,9 +1,13 @@
 import math
 
 
-def area(r):
-    return math.pi * r * r
+def area(radius):
+    if radius <= 0:
+        raise ValueError("Side lengths must be positive.")
+    return math.pi * radius * radius
 
 
-def perimeter(r):
-    return 2 * math.pi * r
+def perimeter(radius):
+    if radius <= 0:
+        raise ValueError("radius lengths must be positive.")
+    return 2 * math.pi * radius
