@@ -1,5 +1,5 @@
 import unittest
-from geometric_lib import calculate
+import calculate
 
 
 class TestCalculate(unittest.TestCase):

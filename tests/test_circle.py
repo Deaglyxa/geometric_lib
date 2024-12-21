@@ -1,6 +1,6 @@
 import unittest
 import math
-from geometric_lib import circle
+import circle
 
 
 class TestCircle(unittest.TestCase):
