@@ -17,10 +17,10 @@ class TestCircle(unittest.TestCase):
         self.assertAlmostEqual(result, expected_perimeter, places=5)
 
     def test_invalid_radius(self):
-        r = -5
         with self.assertRaises(ValueError):
-            circle.area(r)
-            circle.perimeter(r)
+            circle.area(-1)
+        with self.assertRaises(ValueError):
+            circle.perimeter(-1)
 
 
 if __name__ == "__main__":
