@@ -17,7 +17,7 @@ class TestSquare(unittest.TestCase):
 
     def test_invalid_side_area(self):
         self.assertEqual(square.area(-1), (-1) * (-1))
-    
+
     def test_invalid_side_perimeter(self):
         self.assertEqual(square.perimeter(-1), 4 * (-1))
 
